@@ -1,0 +1,15 @@
+header
+{
+	background: #005387;
+}
+
+div.feature-box div.feature-box-icon, .col-md-3 .course-box,footer div.footer-ribon, div.footer-copyright 
+ { background: #005387 url(/images/pattern.png) repeat center center !important; }
+.selected-reading-boxes .col-md-3 .course-box{ background-color: transparent !important; }
+header nav ul.nav-main li a:hover, header nav ul.nav-main li.dropdown:hover a.dropdown-toggle { background: #eee;} 
+header nav ul.nav-main li.dropdown:hover > ul{ border:2px solid #eee}
+header nav ul.nav-main ul.dropdown-menu > li > a:hover, #mainMenu > li:hover, header nav.mega-menu ul.nav-main .mega-menu-content ul.sub-menu li:hover{ background: #eee !important;}
+img.mobile-apps { border: 1px solid #316441 !important; }
+footer ul.list li{ background: none !important; padding: 0px; }
+p a, footer i.icon, footer ul.list.icons li i { color: #316441 !important; }
+p { word-wrap: break-word;}

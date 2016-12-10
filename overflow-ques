@@ -1,0 +1,30 @@
+      <?php
+       $group = array(
+       	array('id'=>'xxxx','name'=>'JIIT Programming Hub'),
+       	array('id'=>'xxx' , 'name'=>'OSDC'),
+       	);
+
+      $access_token = 'my token';
+
+      $n = count($group);
+      $i = -1;
+
+        while($n--)
+        {
+      	    $i++;
+      		  $add = 'https://graph.facebook.com/'.$group[$i]['id'].'/feed?fields=id,name,story,message,updated_time&access_token='.$access_token;
+            $json = file_get_contents($add);
+        	 	$data = json_decode($json);
+        		if($json)
+        		{
+      	   		foreach($data->data as $item)
+      		  	{
+        				  $post_id = $item->id;
+                  $name = $item->name;
+                  $date = $item->updated_time;
+                  $story = $item->story;
+                  $message = $item->message;
+        			}
+        		}
+          }
+      ?>

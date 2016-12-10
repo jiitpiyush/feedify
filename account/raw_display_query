@@ -1,0 +1,32 @@
+
+get all cat list 
+
+foreach cat
+{
+	get all subcat 
+	
+	foreach subcat
+	{
+		if(sub_cat==all)
+		{
+			select * from fd_rss where cat &
+			get all site where cat and sub_cat=all;
+			$sql .= " site='site'" 
+			foreach site
+			{
+				 $sql .= " OR site=".$site;
+			}
+		}
+		else
+		{
+			select * from fd_rss where cat & sub_cat
+			get all site where cat and sub_cat=$sub_cat
+			$sql .= "AND site=".$site
+			foreach site
+			{
+				$sql .= " OR site=".$site 
+			}
+		}
+		echo $sql."<br/>";
+	}
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	function check_login()
+	{
+		var user = prompt("enter username");
+		var pass = prompt("enter password");
+		var string = 'user='+user+'&pass='+pass;
+		jQuery.ajax( {
+            url: 'a_login.php',
+            data: string,
+            type: 'POST',
+            success: function(data)
+            {
+//             alert(data);
+               console.log(data);
+               alert(data);
+            },
+            error:function(){},
+         });
+
+	}
+	</script>
+</head>
+<body onload="check_login()">
+</body>
+</html>

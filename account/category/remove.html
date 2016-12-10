@@ -1,0 +1,374 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Feedify</title>
+    <!--card w3>-->
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="/account/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/account/css/freelancer.css" rel="stylesheet">
+    <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src="jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+   <title>Remove Category</title>
+    <style>.cssmenu ul ul li 
+    {
+      background:url(images/redm.png) 96% center no-repeat;
+    }
+   </style>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+   function rm_category(cat, sub_cat, site)
+   {
+      var string = 'cat='+cat+'&sub_cat='+sub_cat+'&site='+site;
+      //console.log(string); 
+         jQuery.ajax( {
+            url: 'remove_cat.php',
+            data: string,
+            type: 'POST',
+            success: function(data)
+            {
+//             alert(data);
+               console.log(data);
+               alert(data);
+            },
+            error:function(){},
+         });
+   }
+
+</script>
+<style>
+#page-top
+{
+  padding-top: 100px;
+  background-color: #18BC9C;
+}
+</style>
+</head>
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Feedify</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/account/index.php#portfolio">My Categories</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/login/logout.php"><span class="s4">Logout</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+<div class='container'>
+<div id='cssmenu' class='cssmenu'>
+   
+   <ul>
+   <li class='active'><a href='#'><span>Sports</span></a></li>
+   <li class='has-sub'><a href='#'><span>All</span></a>
+      <ul>
+         <li onclick="rm_category('sports','all','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('sports','all','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Criket</span></a>
+      <ul>
+         <li onclick="rm_category('sports','cricket','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('sports','cricket','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('sports','cricket','reuters')"><a href='#'><span>Reuters</span></a></li>
+         <li onclick="rm_category('sports','cricket','india tv')" class='last'><a href='#'><span>India TV</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Football</span></a>
+      <ul>
+         <li onclick="rm_category('sports','football','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('sports','football','indian express')"><a href='#'><span>Indian Express</span></a></li>
+         <li onclick="rm_category('sports','football','india tv')" class='last'><a href='#'><span>India TV</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Hockey</span></a>
+      <ul>
+         <li onclick="rm_category('sports','hockey','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('sports','hockey','india tv')" class='last'><a href='#'><span>India TV</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Racing</span></a>
+      <ul>
+         <li onclick="rm_category('sports','race','hindu')"><a href='#'><span>The Hindu</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>F1</span></a>
+      <ul>
+         <li onclick="rm_category('sports','formula-one','hindu')"><a href='#'><span>Reuters</span></a></li>
+         </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Golf</span></a>
+      <ul>
+         <li onclick="rm_category('sports','golf','reuters')"><a href='#'><span>Reuters</span></a></li>
+         </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Tennis</span></a>
+      <ul>
+         <li onclick="rm_category('sports','tennis','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('sports','tennis','india tv')" class='last'><a href='#'><span>India TV</span></a></li>
+      </ul>
+   </li>
+   </ul>
+</div>
+
+<div id='cssmenu1' class='cssmenu'>
+   <ul>
+   <li class='active'><a href='#'><span>Cities</span></a></li>
+<li class='has-sub'><a href='#'><span>All</span></a>
+   <ul>
+         <li onclick="rm_category('city','all','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('city','all','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('city','all','indian express')"><a href='#'><span>Indian Express</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Delhi</span></a>
+     <ul>
+         <li onclick="rm_category('city','delhi','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('city','delhi','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('city','delhi','indian express')"><a href='#'><span>Indian Express</span></a></li>
+         </ul>
+   </li>  
+   <li class='has-sub'><a href='#'><span>Mumbai</span></a>
+     <ul>
+         <li onclick="rm_category('city','mumbai','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('city','mumbai','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('city','mumbai','indian express')"><a href='#'><span>Indian Express</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Chennai</span></a>
+     <ul>
+         <li onclick="rm_category('city','chennai','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('city','chennai','hindu')"><a href='#'><span>The Hindu</span></a></li>
+      </ul>
+   </li>  
+   <li class='has-sub'><a href='#'><span>Banglore</span></a>
+     <ul>
+         <li onclick="rm_category('city','banglore','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('city','banglore','hindu')"><a href='#'><span>The Hindu</span></a></li>
+      </ul>
+   </li>
+   </ul>
+</div>
+
+
+<div id='cssmenu2' class='cssmenu'>
+   <ul>
+   <li class='active'><a href='#'><span>Opinion</span></a></li>
+   <li class='has-sub'><a href='#'><span>All</span></a>
+     <ul>
+         <li onclick="rm_category('opinion','all','toi')"><a href='#'><span>Times Of India</span></a></li>
+         </ul>
+   </li>
+<li class='has-sub'><a href='#'><span>Editorial</span></a>
+     <ul>
+         <li onclick="rm_category('opinion','editorial','toi')"><a href='#'><span>Times of India</span></a></li>
+         </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Interview</span></a>
+     <ul>
+         <li onclick="rm_category('opinion','interview','toi')"><a href='#'><span>Times of India</span></a></li>
+         </ul>
+   </li>
+   </ul>
+</div>
+<div id='cssmenu3' class='cssmenu'>
+   <ul>
+   <li class='active'><a href='#'><span>Business</span></a></li>
+   <li class='has-sub'><a href='#'><span>All</span></a>
+     <ul>
+         <li onclick="rm_category('business','all','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('business','all','business_today')"><a href='#'><span>Business Today</span></a></li>
+         <li onclick="rm_category('business','all','ndtv_profit')"><a href='#'><span>NDTV Profit</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><span>Stock</span></a>
+     <ul>
+         <li onclick="rm_category('business','stock','money_control')"><a href='#'><span>Money Control</span></a></li>
+         <li onclick="rm_category('business','stock','economic_times')"><a href='#'><span>Economic Times</span></a></li>
+      </ul>
+   </li>
+   </ul>
+
+</div>
+<div id='cssmenu7' class='cssmenu'>
+   <ul>
+   <li class='active'><a href='#'><span>Technology</span></a></li>
+   <li class='has-sub'><a href='#'><span>All</span></a>
+     <ul>
+         <li onclick="rm_category('tech','all','indian express')"><a href='#'><span>Indian Express</span></a></li>
+         <li onclick="rm_category('tech','all','cnet')"><a href='#'><span>CNET</span></a></li>
+      </ul>
+   </li>
+   
+   </ul>
+</div>
+
+<div id='cssmenu5' class='cssmenu'>
+   <ul>
+   <li class='active'><a href='#'><span>National</span></a></li>
+   <li class='has-sub'><a href='#'><span>All</span></a>
+     <ul>
+         <li onclick="rm_category('national','all','toi')"><a href='#'><span>Times of India</span></a></li>
+         <li onclick="rm_category('national','all','hindu')"><a href='#'><span>The Hindu</span></a></li>
+         <li onclick="rm_category('national','all','reuters')"><a href='#'><span>Reuters</span></a></li>
+      </ul>
+   </li>
+
+   
+   <!--
+   <li class='has-sub'><a href='#'><span>About</span></a>
+      <ul>
+         <li><a href='#'><span>Company</span></a></li>
+         <li class='last'><a href='#'><span>Contact</span></a></li>
+      </ul>
+   </li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+   -->
+   </ul>
+</div>
+
+
+<div id='cssmenu6' class='cssmenu'>
+   <ul>
+   <li class='active'><a href='#'><span>Politics</span></a></li>
+   <li class='has-sub'><a href='#'><span>All</span></a>
+     <ul>
+         <li onclick="rm_category('politics','all','indian express')"><a href='#'><span>Indian Express</span></a></li>
+         <li onclick="rm_category('politics','all','india tv')"class='last'><a href='#'><span>India TV</span></a></li>
+      </ul>
+   </li>
+
+   
+   <!--
+   <li class='has-sub'><a href='#'><span>About</span></a>
+      <ul>
+         <li><a href='#'><span>Company</span></a></li>
+         <li class='last'><a href='#'><span>Contact</span></a></li>
+      </ul>
+   </li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+   -->
+   </ul>
+</div>
+
+<div id='cssmenu4' class='cssmenu'>
+   <ul>
+   <li class='active'><a href='#'><span>International</span></a></li>
+<li class='has-sub'><a href='#'><span>All</span></a>
+     <ul>
+         <li onclick="rm_category('international','all','toi')"><a href='#'><span>Times Of India</span></a></li>
+         <li onclick="rm_category('international','all','reuters')"><a href='#'><span>Reuters</span></a></li>
+      </ul>
+   </li>
+   </ul>
+</div>
+</div>
+
+<br/>
+<br/>
+ <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <pz><em>A-10<br>Jaypee Institute Of Info. Tech<br>Sec-62 Noida</em></p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a  href="https://www.facebook.com/feedify.co.in/" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+        <div class="footer-col col-md-4">
+                        <h3>About Us</h3>
+                        <p><em>We are Students of CSE dept 3rd Year <a href="" target="_blank">contact us on facebook</a></em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Feedify 2015
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="/account/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/account/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/account/js/classie.js"></script>
+    <script src="/account/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/account/js/jqBootstrapValidation.js"></script>
+    <script src="/account/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/account/js/freelancer.js"></script>
+
+</body>
+<html>
